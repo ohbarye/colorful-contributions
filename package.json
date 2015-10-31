@@ -1,0 +1,24 @@
+{
+  "name": "Colorful Contributions in GitHub",
+  "version": "0.1.0",
+  "description": "Color GitHub contributions.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohbarye/colorful-contributions.git"
+  },
+  "author": "ohbarye",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ohbarye/colorful-contributions/issues"
+  },
+  "homepage": "https://github.com/ohbarye/colorful-contributions#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-coffee": "^0.13.0",
+    "grunt-contrib-haml": "^0.2.0",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+  }
+}
