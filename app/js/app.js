@@ -7,12 +7,15 @@
     if (location.href.match(/.*:\/\/github.com\/.*\/.+/)) {
       return;
     }
-    return chrome.storage.local.get('colorSchemes', function(items) {
+    return chrome.storage.local.get(['colorSchemes', 'selectedScheme'], function(items) {
       var scheme, values;
       if (Object.keys(items).length === 0) {
         return;
       }
-      scheme = items.colorSchemes.ocean;
+      if (items.selectedScheme === 'default') {
+        return;
+      }
+      scheme = items.colorSchemes[items.selectedScheme];
       values = Object.keys(scheme).map(function(key) {
         return scheme[key];
       });

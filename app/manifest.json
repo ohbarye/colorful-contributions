@@ -1,13 +1,11 @@
 {
   "manifest_version": 2,
-  "name": "Colorful Contributions in GitHub",
-  "description": "Color GitHub contributions.",
+  "name": "Colorful Contributions for GitHub",
+  "description": "Color GitHub contributions with your favorite color.",
   "version": "0.1.0",
   "author": "ohbarye",
   "icons": {
-    //"16": "images/icon_16.png",
-    //"48": "images/icon_48.png",
-    //"128": "images/icon_128.png"
+    "128": "images/icon_128.png"
   },
   "content_scripts": [
     {

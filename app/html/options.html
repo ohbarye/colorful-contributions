@@ -4,6 +4,12 @@
     <title>Configuration</title>
     <script src='../vendor/jquery/jquery.min.js'></script>
     <script src='../js/options.js'></script>
+    <style>
+      .color-scheme {
+        float: left;
+        width: 150px;
+      }
+    </style>
   </head>
   <body>
     <form id='form'>
@@ -11,34 +17,12 @@
       <div class='sumbit'>
         <input id='save' type='button' value='Save'>
         <input id='reset' type='button' value='Reset'>
+        <input id='radio-default' name='scheme' type='radio' value='default'>
+        <label for='radio-default'>Use default scheme of GitHub</label>
       </div>
       <div class='default'>
-        <h2>Default color set</h2>
-        <div class='color-scheme' id='spooky'>
-          <h3>spooky</h3>
-          <input id='radio-spooky' name='scheme' type='radio' value='spooky'>
-          <label for='radio-spooky'>Use this scheme</label>
-          <div class='level5'>
-            <label for='level5'>Level 5</label>
-            <input class='spooky level5' type='color'>
-          </div>
-          <div class='level4'>
-            <label for='level4'>Level 4</label>
-            <input class='spooky level4' type='color'>
-          </div>
-          <div class='level3'>
-            <label for='level3'>Level 3</label>
-            <input class='spooky level3' type='color'>
-          </div>
-          <div class='level2'>
-            <label for='level2'>Level 2</label>
-            <input class='spooky level2' type='color'>
-          </div>
-          <div class='level1'>
-            <label for='level1'>Level 1</label>
-            <input class='spooky level1' type='color'>
-          </div>
-        </div>
+        <h2>Choose you favorite color scheme</h2>
+        <p>you can change detailed color settings by clicking each palet.</p>
         <div class='color-scheme' id='ocean'>
           <h3>ocean</h3>
           <input id='radio-ocean' name='scheme' type='radio' value='ocean'>
@@ -64,31 +48,155 @@
             <input class='ocean level1' type='color'>
           </div>
         </div>
-      </div>
-      <h2>Your original color set</h2>
-      <div class='color-scheme' id='original'>
-        <input id='radio-original' name='scheme' type='radio' value='spooky'>
-        <label for='radio-original'>Use this scheme</label>
-        <h3>new</h3>
-        <div class='level5'>
-          <label for='level5'>Level 5</label>
-          <input id='level5' type='color'>
+        <div class='color-scheme' id='volcano'>
+          <h3>volcano</h3>
+          <input id='radio-volcano' name='scheme' type='radio' value='volcano'>
+          <label for='radio-volcano'>Use this scheme</label>
+          <div class='level5'>
+            <label for='level5'>Level 5</label>
+            <input class='volcano level5' type='color'>
+          </div>
+          <div class='level4'>
+            <label for='level4'>Level 4</label>
+            <input class='volcano level4' type='color'>
+          </div>
+          <div class='level3'>
+            <label for='level3'>Level 3</label>
+            <input class='volcano level3' type='color'>
+          </div>
+          <div class='level2'>
+            <label for='level2'>Level 2</label>
+            <input class='volcano level2' type='color'>
+          </div>
+          <div class='level1'>
+            <label for='level1'>Level 1</label>
+            <input class='volcano level1' type='color'>
+          </div>
         </div>
-        <div class='level4'>
-          <label for='level4'>Level 4</label>
-          <input id='level4' type='color'>
+        <div class='color-scheme' id='slacker'>
+          <h3>slacker</h3>
+          <input id='radio-slacker' name='scheme' type='radio' value='slacker'>
+          <label for='radio-slacker'>Use this scheme</label>
+          <div class='level5'>
+            <label for='level5'>Level 5</label>
+            <input class='slacker level5' type='color'>
+          </div>
+          <div class='level4'>
+            <label for='level4'>Level 4</label>
+            <input class='slacker level4' type='color'>
+          </div>
+          <div class='level3'>
+            <label for='level3'>Level 3</label>
+            <input class='slacker level3' type='color'>
+          </div>
+          <div class='level2'>
+            <label for='level2'>Level 2</label>
+            <input class='slacker level2' type='color'>
+          </div>
+          <div class='level1'>
+            <label for='level1'>Level 1</label>
+            <input class='slacker level1' type='color'>
+          </div>
         </div>
-        <div class='level3'>
-          <label for='level3'>Level 3</label>
-          <input id='level3' type='color'>
+        <div class='color-scheme' id='spooky'>
+          <h3>spooky</h3>
+          <input id='radio-spooky' name='scheme' type='radio' value='spooky'>
+          <label for='radio-spooky'>Use this scheme</label>
+          <div class='level5'>
+            <label for='level5'>Level 5</label>
+            <input class='spooky level5' type='color'>
+          </div>
+          <div class='level4'>
+            <label for='level4'>Level 4</label>
+            <input class='spooky level4' type='color'>
+          </div>
+          <div class='level3'>
+            <label for='level3'>Level 3</label>
+            <input class='spooky level3' type='color'>
+          </div>
+          <div class='level2'>
+            <label for='level2'>Level 2</label>
+            <input class='spooky level2' type='color'>
+          </div>
+          <div class='level1'>
+            <label for='level1'>Level 1</label>
+            <input class='spooky level1' type='color'>
+          </div>
         </div>
-        <div class='level2'>
-          <label for='level2'>Level 2</label>
-          <input id='level2' type='color'>
+        <div class='color-scheme' id='original1'>
+          <h3>your original 1</h3>
+          <input id='radio-original1' name='scheme' type='radio' value='original1'>
+          <label for='radio-original1'>Use this scheme</label>
+          <div class='level5'>
+            <label for='level5'>Level 5</label>
+            <input class='original1 level5' type='color' value='#171717'>
+          </div>
+          <div class='level4'>
+            <label for='level4'>Level 4</label>
+            <input class='original1 level4' type='color' value='#474747'>
+          </div>
+          <div class='level3'>
+            <label for='level3'>Level 3</label>
+            <input class='original1 level3' type='color' value='#777777'>
+          </div>
+          <div class='level2'>
+            <label for='level2'>Level 2</label>
+            <input class='original1 level2' type='color' value='#BBBBBB'>
+          </div>
+          <div class='level1'>
+            <label for='level1'>Level 1</label>
+            <input class='original1 level1' type='color' value='#EEEEEE'>
+          </div>
         </div>
-        <div class='level1'>
-          <label for='level1'>Level 1</label>
-          <input id='level1' type='color'>
+        <div class='color-scheme' id='original2'>
+          <h3>your original 2</h3>
+          <input id='radio-original2' name='scheme' type='radio' value='original2'>
+          <label for='radio-original2'>Use this scheme</label>
+          <div class='level5'>
+            <label for='level5'>Level 5</label>
+            <input class='original2 level5' type='color' value='#171717'>
+          </div>
+          <div class='level4'>
+            <label for='level4'>Level 4</label>
+            <input class='original2 level4' type='color' value='#474747'>
+          </div>
+          <div class='level3'>
+            <label for='level3'>Level 3</label>
+            <input class='original2 level3' type='color' value='#777777'>
+          </div>
+          <div class='level2'>
+            <label for='level2'>Level 2</label>
+            <input class='original2 level2' type='color' value='#BBBBBB'>
+          </div>
+          <div class='level1'>
+            <label for='level1'>Level 1</label>
+            <input class='original2 level1' type='color' value='#EEEEEE'>
+          </div>
+        </div>
+        <div class='color-scheme' id='original3'>
+          <h3>your original 3</h3>
+          <input id='radio-original3' name='scheme' type='radio' value='original3'>
+          <label for='radio-original3'>Use this scheme</label>
+          <div class='level5'>
+            <label for='level5'>Level 5</label>
+            <input class='original3 level5' type='color' value='#171717'>
+          </div>
+          <div class='level4'>
+            <label for='level4'>Level 4</label>
+            <input class='original3 level4' type='color' value='#474747'>
+          </div>
+          <div class='level3'>
+            <label for='level3'>Level 3</label>
+            <input class='original3 level3' type='color' value='#777777'>
+          </div>
+          <div class='level2'>
+            <label for='level2'>Level 2</label>
+            <input class='original3 level2' type='color' value='#BBBBBB'>
+          </div>
+          <div class='level1'>
+            <label for='level1'>Level 1</label>
+            <input class='original3 level1' type='color' value='#EEEEEE'>
+          </div>
         </div>
       </div>
     </form>

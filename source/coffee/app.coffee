@@ -2,11 +2,14 @@ $ ->
   url = location.href
   return if location.href.match /.*:\/\/github.com\/.*\/.+/
 
-  chrome.storage.local.get 'colorSchemes', (items) ->
+  chrome.storage.local.get ['colorSchemes', 'selectedScheme'], (items) ->
     # If data is not prepared, do nothing.
     return if Object.keys(items).length == 0
 
-    scheme = items.colorSchemes.ocean
+    # If use GitHub default, do nothing.
+    return if items.selectedScheme == 'default'
+
+    scheme = items.colorSchemes[items.selectedScheme]
 
     values = Object.keys(scheme).map (key) -> scheme[key]
     $.each values, (i, val) ->

@@ -4,6 +4,11 @@
     %title Configuration
     %script{src: "../vendor/jquery/jquery.min.js"}
     %script{src: "../js/options.js"}
+    :css
+      .color-scheme {
+        float: left;
+        width: 150px;
+      }
 
   %body
     %form{id: "form"}
@@ -11,28 +16,12 @@
       .sumbit
         %input#save{type: "button", value: "Save"}
         %input#reset{type: "button", value: "Reset"}
+        %input#radio-default{type: "radio", name: "scheme", value: "default"}
+        %label{for: "radio-default"} Use default scheme of GitHub
 
       .default
-        %h2 Default color set
-        .color-scheme#spooky
-          %h3 spooky
-          %input#radio-spooky{type: "radio", name: "scheme", value: "spooky"}
-          %label{for: "radio-spooky"} Use this scheme
-          .level5
-            %label{for: "level5"} Level 5
-            %input.spooky.level5{type: "color"}
-          .level4
-            %label{for: "level4"} Level 4
-            %input.spooky.level4{type: "color"}
-          .level3
-            %label{for: "level3"} Level 3
-            %input.spooky.level3{type: "color"}
-          .level2
-            %label{for: "level2"} Level 2
-            %input.spooky.level2{type: "color"}
-          .level1
-            %label{for: "level1"} Level 1
-            %input.spooky.level1{type: "color"}
+        %h2 Choose you favorite color scheme
+        %p you can change detailed color settings by clicking each palet.
 
         .color-scheme#ocean
           %h3 ocean
@@ -54,25 +43,123 @@
             %label{for: "level1"} Level 1
             %input.ocean.level1{type: "color"}
 
-      %h2 Your original color set
-      .color-scheme#original
-        %input#radio-original{type: "radio", name: "scheme", value: "spooky"}
-        %label{for: "radio-original"} Use this scheme
-        %h3 new
-        .level5
-          %label{for: "level5"} Level 5
-          %input#level5{type: "color"}
-        .level4
-          %label{for: "level4"} Level 4
-          %input#level4{type: "color"}
-        .level3
-          %label{for: "level3"} Level 3
-          %input#level3{type: "color"}
-        .level2
-          %label{for: "level2"} Level 2
-          %input#level2{type: "color"}
-        .level1
-          %label{for: "level1"} Level 1
-          %input#level1{type: "color"}
+        .color-scheme#volcano
+          %h3 volcano
+          %input#radio-volcano{type: "radio", name: "scheme", value: "volcano"}
+          %label{for: "radio-volcano"} Use this scheme
+          .level5
+            %label{for: "level5"} Level 5
+            %input.volcano.level5{type: "color"}
+          .level4
+            %label{for: "level4"} Level 4
+            %input.volcano.level4{type: "color"}
+          .level3
+            %label{for: "level3"} Level 3
+            %input.volcano.level3{type: "color"}
+          .level2
+            %label{for: "level2"} Level 2
+            %input.volcano.level2{type: "color"}
+          .level1
+            %label{for: "level1"} Level 1
+            %input.volcano.level1{type: "color"}
 
+        .color-scheme#slacker
+          %h3 slacker
+          %input#radio-slacker{type: "radio", name: "scheme", value: "slacker"}
+          %label{for: "radio-slacker"} Use this scheme
+          .level5
+            %label{for: "level5"} Level 5
+            %input.slacker.level5{type: "color"}
+          .level4
+            %label{for: "level4"} Level 4
+            %input.slacker.level4{type: "color"}
+          .level3
+            %label{for: "level3"} Level 3
+            %input.slacker.level3{type: "color"}
+          .level2
+            %label{for: "level2"} Level 2
+            %input.slacker.level2{type: "color"}
+          .level1
+            %label{for: "level1"} Level 1
+            %input.slacker.level1{type: "color"}
+
+        .color-scheme#spooky
+          %h3 spooky
+          %input#radio-spooky{type: "radio", name: "scheme", value: "spooky"}
+          %label{for: "radio-spooky"} Use this scheme
+          .level5
+            %label{for: "level5"} Level 5
+            %input.spooky.level5{type: "color"}
+          .level4
+            %label{for: "level4"} Level 4
+            %input.spooky.level4{type: "color"}
+          .level3
+            %label{for: "level3"} Level 3
+            %input.spooky.level3{type: "color"}
+          .level2
+            %label{for: "level2"} Level 2
+            %input.spooky.level2{type: "color"}
+          .level1
+            %label{for: "level1"} Level 1
+            %input.spooky.level1{type: "color"}
+
+        .color-scheme#original1
+          %h3 your original 1
+          %input#radio-original1{type: "radio", name: "scheme", value: "original1"}
+          %label{for: "radio-original1"} Use this scheme
+          .level5
+            %label{for: "level5"} Level 5
+            %input.original1.level5{type: "color", value:"#171717"}
+          .level4
+            %label{for: "level4"} Level 4
+            %input.original1.level4{type: "color", value:"#474747"}
+          .level3
+            %label{for: "level3"} Level 3
+            %input.original1.level3{type: "color", value:"#777777"}
+          .level2
+            %label{for: "level2"} Level 2
+            %input.original1.level2{type: "color", value:"#BBBBBB"}
+          .level1
+            %label{for: "level1"} Level 1
+            %input.original1.level1{type: "color", value:"#EEEEEE"}
+
+        .color-scheme#original2
+          %h3 your original 2
+          %input#radio-original2{type: "radio", name: "scheme", value: "original2"}
+          %label{for: "radio-original2"} Use this scheme
+          .level5
+            %label{for: "level5"} Level 5
+            %input.original2.level5{type: "color", value:"#171717"}
+          .level4
+            %label{for: "level4"} Level 4
+            %input.original2.level4{type: "color", value:"#474747"}
+          .level3
+            %label{for: "level3"} Level 3
+            %input.original2.level3{type: "color", value:"#777777"}
+          .level2
+            %label{for: "level2"} Level 2
+            %input.original2.level2{type: "color", value:"#BBBBBB"}
+          .level1
+            %label{for: "level1"} Level 1
+            %input.original2.level1{type: "color", value:"#EEEEEE"}
+
+        .color-scheme#original3
+          %h3 your original 3
+          %input#radio-original3{type: "radio", name: "scheme", value: "original3"}
+          %label{for: "radio-original3"} Use this scheme
+          .level5
+            %label{for: "level5"} Level 5
+            %input.original3.level5{type: "color", value:"#171717"}
+          .level4
+            %label{for: "level4"} Level 4
+            %input.original3.level4{type: "color", value:"#474747"}
+          .level3
+            %label{for: "level3"} Level 3
+            %input.original3.level3{type: "color", value:"#777777"}
+          .level2
+            %label{for: "level2"} Level 2
+            %input.original3.level2{type: "color", value:"#BBBBBB"}
+          .level1
+            %label{for: "level1"} Level 1
+            %input.original3.level1{type: "color", value:"#EEEEEE"}
 
