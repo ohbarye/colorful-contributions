@@ -35,26 +35,21 @@ loadDataFromStorage = ->
     if Object.keys(items).length == 0
       items.colorSchemes = initialData
 
-    items.colorSchemes.forEach (item) ->
-      colorScheme = item.name
-      for level, rgb of item.data
+    $.each items.colorSchemes, (name, data) ->
+      colorScheme = name
+      for level, rgb of data
         $(".#{colorScheme}.#{level}").val(rgb)
 
 save = ->
-  schemeConfig = []
-
+  config.colorSchemes = {}
   $('.color-scheme').each (index, element) ->
     scheme = $(element)
-    schemeConfig.push
-      name: scheme.attr('id')
-      data:
-        level5: scheme.find('input.level5').val()
-        level4: scheme.find('input.level4').val()
-        level3: scheme.find('input.level3').val()
-        level2: scheme.find('input.level2').val()
-        level1: scheme.find('input.level1').val()
-
-  config[colorSchemes] = schemeConfig
+    config[colorSchemes][element.id] =
+      level5: scheme.find('input.level5').val()
+      level4: scheme.find('input.level4').val()
+      level3: scheme.find('input.level3').val()
+      level2: scheme.find('input.level2').val()
+      level1: scheme.find('input.level1').val()
 
   chrome.storage.local.set config, ->
     alert("success")
@@ -63,25 +58,20 @@ save = ->
 # initil data
 ###################
 spooky =
-  name: 'spooky'
-  data:
-    level5: '#03001C'
-    level4: '#FE9600'
-    level3: '#FFC501'
-    level2: '#FFEE4A'
-    level1: '#EEEEEE'
+  level5: '#03001C'
+  level4: '#FE9600'
+  level3: '#FFC501'
+  level2: '#FFEE4A'
+  level1: '#EEEEEE'
 
 ocean =
-  name: 'ocean'
-  data:
-    level5: '#004FBF'
-    level4: '#477ECD'
-    level3: '#8EAEDB'
-    level2: '#BECEE4'
-    level1: '#EEEEEE'
+  level5: '#004FBF'
+  level4: '#477ECD'
+  level3: '#8EAEDB'
+  level2: '#BECEE4'
+  level1: '#EEEEEE'
 
-initialData = [
-  spooky
-  ocean
-]
+initialData =
+  spooky: spooky
+  ocean:  ocean
 

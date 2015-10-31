@@ -9,13 +9,15 @@
     <form id='form'>
       <h1>Configuration</h1>
       <div class='sumbit'>
-        <input id='save' type='submit' value='Save'>
-        <input id='reset' type='submit' value='Reset'>
+        <input id='save' type='button' value='Save'>
+        <input id='reset' type='button' value='Reset'>
       </div>
       <div class='default'>
         <h2>Default color set</h2>
         <div class='color-scheme' id='spooky'>
           <h3>spooky</h3>
+          <input id='radio-spooky' name='scheme' type='radio' value='spooky'>
+          <label for='radio-spooky'>Use this scheme</label>
           <div class='level5'>
             <label for='level5'>Level 5</label>
             <input class='spooky level5' type='color'>
@@ -39,6 +41,8 @@
         </div>
         <div class='color-scheme' id='ocean'>
           <h3>ocean</h3>
+          <input id='radio-ocean' name='scheme' type='radio' value='ocean'>
+          <label for='radio-ocean'>Use this scheme</label>
           <div class='level5'>
             <label for='level5'>Level 5</label>
             <input class='ocean level5' type='color'>
@@ -63,6 +67,8 @@
       </div>
       <h2>Your original color set</h2>
       <div class='color-scheme' id='original'>
+        <input id='radio-original' name='scheme' type='radio' value='spooky'>
+        <label for='radio-original'>Use this scheme</label>
         <h3>new</h3>
         <div class='level5'>
           <label for='level5'>Level 5</label>

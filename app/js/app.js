@@ -2,14 +2,19 @@
   var toHexRGB;
 
   $(function() {
+    var url;
+    url = location.href;
+    if (location.href.match(/.*:\/\/github.com\/.*\/.+/)) {
+      return;
+    }
     return chrome.storage.local.get('colorSchemes', function(items) {
       var scheme, values;
       if (Object.keys(items).length === 0) {
         return;
       }
-      scheme = items.colorSchemes[1];
-      values = Object.keys(scheme.data).map(function(key) {
-        return scheme.data[key];
+      scheme = items.colorSchemes.ocean;
+      values = Object.keys(scheme).map(function(key) {
+        return scheme[key];
       });
       return $.each(values, function(i, val) {
         var defaultColor, defaultColorDefinition;

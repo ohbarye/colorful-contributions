@@ -1,12 +1,14 @@
 $ ->
+  url = location.href
+  return if location.href.match /.*:\/\/github.com\/.*\/.+/
 
   chrome.storage.local.get 'colorSchemes', (items) ->
     # If data is not prepared, do nothing.
     return if Object.keys(items).length == 0
 
-    scheme = items.colorSchemes[1]
+    scheme = items.colorSchemes.ocean
 
-    values = Object.keys(scheme.data).map (key) -> scheme.data[key]
+    values = Object.keys(scheme).map (key) -> scheme[key]
     $.each values, (i, val) ->
       defaultColorDefinition = $(".legend li:nth-child(#{i+1})")
       defaultColor = toHexRGB defaultColorDefinition.css('background-color')
