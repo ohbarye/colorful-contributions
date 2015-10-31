@@ -1,5 +1,5 @@
 {
-  "name": "Colorful Contributions in GitHub",
+  "name": "colorful-contributions",
   "version": "0.1.0",
   "description": "Color GitHub contributions.",
   "repository": {
@@ -19,6 +19,6 @@
     "grunt-contrib-watch": "^0.6.1"
   },
   "dependencies": {
-    "jquery": "^2.1.4",
+    "jquery": "^2.1.4"
   }
 }

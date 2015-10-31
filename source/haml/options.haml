@@ -3,7 +3,70 @@
   %head
     %title Configuration
     %script{src: "../vendor/jquery/jquery.min.js"}
+    %script{src: "../js/options.js"}
 
   %body
     %form{id: "form"}
-      %input#save.btn-lg.btn-primary{type: "submit", value: "Save"}
+      %h1 Configuration
+      .sumbit
+        %input#save{type: "submit", value: "Save"}
+        %input#reset{type: "submit", value: "Reset"}
+
+      .default
+        %h2 Default color set
+        .color-scheme#spooky
+          %h3 spooky
+          .level5
+            %label{for: "level5"} Level 5
+            %input.spooky.level5{type: "color"}
+          .level4
+            %label{for: "level4"} Level 4
+            %input.spooky.level4{type: "color"}
+          .level3
+            %label{for: "level3"} Level 3
+            %input.spooky.level3{type: "color"}
+          .level2
+            %label{for: "level2"} Level 2
+            %input.spooky.level2{type: "color"}
+          .level1
+            %label{for: "level1"} Level 1
+            %input.spooky.level1{type: "color"}
+
+        .color-scheme#ocean
+          %h3 ocean
+          .level5
+            %label{for: "level5"} Level 5
+            %input.ocean.level5{type: "color"}
+          .level4
+            %label{for: "level4"} Level 4
+            %input.ocean.level4{type: "color"}
+          .level3
+            %label{for: "level3"} Level 3
+            %input.ocean.level3{type: "color"}
+          .level2
+            %label{for: "level2"} Level 2
+            %input.ocean.level2{type: "color"}
+          .level1
+            %label{for: "level1"} Level 1
+            %input.ocean.level1{type: "color"}
+
+      %h2 Your original color set
+      .color-scheme#original
+        %h3 new
+        .level5
+          %label{for: "level5"} Level 5
+          %input#level5{type: "color"}
+        .level4
+          %label{for: "level4"} Level 4
+          %input#level4{type: "color"}
+        .level3
+          %label{for: "level3"} Level 3
+          %input#level3{type: "color"}
+        .level2
+          %label{for: "level2"} Level 2
+          %input#level2{type: "color"}
+        .level1
+          %label{for: "level1"} Level 1
+          %input#level1{type: "color"}
+
+

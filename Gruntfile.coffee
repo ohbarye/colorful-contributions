@@ -20,7 +20,6 @@ module.exports = (grunt) ->
     haml:
       dist:
         files:
-          'app/html/popup.html': 'source/haml/popup.haml'
           'app/html/options.html': 'source/haml/options.haml'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-haml'
